@@ -4,10 +4,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TeamMembersComponent } from './meet-the-team/team-members.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TeamMembersComponent,
   ],
   imports: [
     BrowserModule,

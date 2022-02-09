@@ -1,0 +1,15 @@
+:host .app {
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+
+    &__meet-the-team-header {
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 400;
+        padding: 71px 821px 48px 271px;
+    } 
+    
+    &__team-members {
+        padding: 0 344px 71px 344px;
+    }
+}

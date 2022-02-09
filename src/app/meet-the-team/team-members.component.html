@@ -1,0 +1,12 @@
+<div class="d-flex-row-align" *ngFor="let user of results; let i=index; let even=even">
+    <div class="member-cards d-flex-col-align">
+        <p>{{user.name?.first}} {{user.name?.last}}</p>
+        <img src={{user.picture?.large}}/>
+        <p>{{user?.location?.city}}</p>
+        <div class="d-flex-row-align">
+            <img src="../../icons/email-icon.svg"/>
+            <img src="../../icons/call-icon.svg"/>
+        </div>
+        
+    </div>
+</div>
