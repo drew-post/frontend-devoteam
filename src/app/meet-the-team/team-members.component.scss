@@ -98,7 +98,7 @@
     }
 
     &__name-list {
-        margin: 28px 363px 3px 23px;
+        margin: 28px 0 3px 23px;
         white-space: nowrap;
     }
 
@@ -127,7 +127,7 @@
     }
 
     &__city-list {
-        margin: 0 363px 31px 23px;
+        margin: 0 0 31px 23px;
     }
 
     &__contact-info-grid {
@@ -135,7 +135,8 @@
     }
 
     &__contact-info-list {
-        margin: 40px 33px 38px 0;
+        margin: 40px 33px 38px 665px;
+        position: absolute;
     }
 
     &__email-icon, &__call-icon {
