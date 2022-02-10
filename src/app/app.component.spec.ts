@@ -30,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('frontend-devoteam app is running!');
+    expect(compiled.querySelector('.app__meet-the-team-header')?.textContent).toContain('Meet the Team');
   });
 });
