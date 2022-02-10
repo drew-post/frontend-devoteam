@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { User } from '../models/users.model';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'team-members',
@@ -8,8 +8,10 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./team-members.component.scss']
 })
 export class TeamMembersComponent implements OnInit {
-  unformattedResponse: any;
-  results: User[] | undefined;
+  public unformattedResponse: any;
+  public results: User[] | undefined;
+  public display: number = 1;
+  public searchInput: string = '';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -20,5 +22,11 @@ export class TeamMembersComponent implements OnInit {
       this.results=this.unformattedResponse.results; 
     });
   }
+
+  changeDisplay(mode: number): void {
+    this.display = mode;
+  }
+
+
 
 }

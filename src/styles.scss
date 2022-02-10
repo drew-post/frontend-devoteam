@@ -1,7 +1,3 @@
-* {
-    font-family: 'Work Sans', sans-serif;
-}
-
 html {
     background-color: var(--main-bg-color);
 }
@@ -11,19 +7,10 @@ h1, h2, p, div {
     margin: 0;
 }
 
-.d-flex-col-align {
-    display: flex;
-    flex-direction: column;
-}
-
-.d-flex-row-align {
-    display: flex;
-    flex-direction: row;
-}
-
 :root{
     --main-bg-color: #EBE9E4;
-    --sage-green: #A7B8A8;
-    --light-pink: #E3D5C9;
-    --light-orange: #E7CDAB;
+    --sage-green-card-color: #A7B8A8;
+    --light-pink-card-color: #E3D5C9;
+    --light-orange-card-color: #E7CDAB;
+    --white-card-color: #ffffff;
 }

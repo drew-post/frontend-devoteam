@@ -1,12 +1,72 @@
-<div class="d-flex-row-align" *ngFor="let user of results; let i=index; let even=even">
-    <div class="member-cards d-flex-col-align">
-        <p>{{user.name?.first}} {{user.name?.last}}</p>
-        <img src={{user.picture?.large}}/>
-        <p>{{user?.location?.city}}</p>
-        <div class="d-flex-row-align">
-            <img src="../../icons/email-icon.svg"/>
-            <img src="../../icons/call-icon.svg"/>
-        </div>
-        
+
+<ng-container *ngIf="display === 1">
+    <div class="members__search-bar">
+        <button class="members__sort-view-icon"></button>
+        <input name="searchInput" type="text" [(ngModel)]="searchInput" size="50">
+        <button class="members__grid-view-icon" value="2" (click)="changeDisplay(2)"></button>  
     </div>
-</div>
+
+    <ng-container *ngIf="searchInput === ''">
+        <div class="members" *ngFor="let user of results; let i=index">
+            <div class="members__member-cards">
+                <p class="members__name">{{user.name?.first}} {{user.name?.last}}</p>
+                <img class="members__image" src={{user.picture?.large}}/>
+                <p class="members__city">{{user?.location?.city}}</p>
+                <div class="members__contact-info">
+                    <button class="members__email-icon"></button>
+                    <button class="members__call-icon"></button>
+                </div> 
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="searchInput !== ''">
+        <div class="members" *ngFor="let user of results | search: searchInput; let i=index">
+            <div class="members__member-cards">
+                <p class="members__name">{{user.name?.first}} {{user.name?.last}}</p>
+                <img class="members__image" src={{user.picture?.large}}/>
+                <p class="members__city">{{user?.location?.city}}</p>
+                <div class="members__contact-info">
+                    <button class="members__email-icon"></button>
+                    <button class="members__call-icon"></button>
+                </div> 
+            </div>
+        </div>
+    </ng-container>
+    
+</ng-container>
+
+<ng-container *ngIf="display === 2">
+    <div class="members__search-bar">
+        <button class="members__sort-view-icon"></button>
+        <input name="searchInput" type="text" [(ngModel)]="searchInput" size="50">
+            <button class="members__list-view-icon" value="1" (click)="changeDisplay(1)"></button>  
+    </div>
+    <ng-container *ngIf="searchInput === ''">
+        <div class="members" *ngFor="let user of results; let i=index">
+            <div class="members__member-cards">
+                <p class="members__name">{{user.name?.first}} {{user.name?.last}}</p>
+                <img class="members__image" src={{user.picture?.large}}/>
+                <p class="members__city">{{user?.location?.city}}</p>
+                <div class="members__contact-info">
+                    <button class="members__email-icon"></button>
+                    <button class="members__call-icon"></button>
+                </div> 
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="searchInput !== ''">
+        <div class="members" *ngFor="let user of results | search: searchInput; let i=index">
+            <div class="members__member-cards">
+                <p class="members__name">{{user.name?.first}} {{user.name?.last}}</p>
+                <img class="members__image" src={{user.picture?.large}}/>
+                <p class="members__city">{{user?.location?.city}}</p>
+                <div class="members__contact-info">
+                    <button class="members__email-icon"></button>
+                    <button class="members__call-icon"></button>
+                </div> 
+            </div>
+        </div>
+    </ng-container>
+</ng-container>
