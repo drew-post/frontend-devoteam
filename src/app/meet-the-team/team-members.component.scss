@@ -42,15 +42,30 @@
         background: url('../../icons/green-grid-card.svg') no-repeat; 
     }
 
+    &__member-cards-grid:nth-child(3n+1) {
+        background: url('../../icons/orange-grid-card.svg') no-repeat; 
+    }
+
+    &__member-cards-grid:nth-child(3n+2) {
+        background: url('../../icons/pink-grid-card.svg') no-repeat; 
+    }
+
     &__member-cards-list {
         width: 749px;
         height: 100px;
         border-radius: 20px;
         background: url('../../icons/green-list-card.svg') no-repeat;
-        padding-bottom: 61px;
+        padding-bottom: 18px;
         display: flex;
         flex-direction: row;
+    }
 
+    &__member-cards-list:nth-child(3n+1) {
+        background: url('../../icons/orange-list-card.svg') no-repeat; 
+    }
+
+    &__member-cards-list:nth-child(3n+2) {
+        background: url('../../icons/pink-list-card.svg') no-repeat; 
     }
 
     &__grid {
@@ -64,7 +79,7 @@
         flex-direction: column;
     }
 
-    &__name-grid, &__name-list, &__image-grid, &__image-list, &__city-grid, &__city-list {
+    &__name-grid, &__name-list, &__image-grid, &__image-list, &__city-grid {
         text-align: center;
     }
 
@@ -75,7 +90,7 @@
     }
 
     &__name-grid {
-        margin: 65px 45px 35px 45px;
+        margin: 65px 45px 35px 42px;
         white-space: nowrap;
     }
 
@@ -118,7 +133,6 @@
 
     &__contact-info-list {
         margin: 40px 33px 38px 0;
-        
     }
 
     &__email-icon, &__call-icon {
@@ -128,11 +142,14 @@
     }
 
     &__email-icon {
-        background: url('../../icons/email-icon.svg') no-repeat;
-        padding-right: 20px;
+        background: url('../../icons/email-icon.svg') no-repeat 1px;
+        padding-top: 4px;
+        padding-right: 30px;
     }
 
     &__call-icon {
-        background: url('../../icons/call-icon.svg') no-repeat;
+        background: url('../../icons/call-icon.svg') no-repeat 1px;
+        padding-right: 22px;
+        padding-top: 7px;
     }
 }
