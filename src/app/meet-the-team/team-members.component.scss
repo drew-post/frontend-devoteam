@@ -3,8 +3,17 @@
     display: flex;
     flex-direction: row;
 
-    &__search-bar {
+    &__view-toggle {
         padding-bottom: 18px;
+    }
+
+    &__search-bar {
+        background: url('../../icons/search-bar.svg') no-repeat 7px;
+        border: none;
+        outline: none;
+        width: 313px;
+        height: 34px;
+        padding-left: 30px;
     }
 
     &__list-view-icon, &__grid-view-icon, &__sort-view-icon {

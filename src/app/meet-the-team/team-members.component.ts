@@ -9,9 +9,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TeamMembersComponent implements OnInit {
   public unformattedResponse: any;
-  public results: User[] | undefined;
+  public results !: User[];
   public display: number = 1;
   public searchInput: string = '';
+  public isAscending: boolean = false;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -27,6 +28,33 @@ export class TeamMembersComponent implements OnInit {
     this.display = mode;
   }
 
+  send() {
+    this.isAscending?this.ascendingSort():this.descendingSort();
+  }
 
+  ascendingSort() {
+    this.isAscending = false;
+    this.results = this.results?.sort((n1,n2) => {
+        if (n1.name.last < n2.name.last) {
+            return 1;
+        }
+        if (n1.name.last > n2.name.last) {
+            return -1;
+        }
+        return 0;
+      });
+  }
 
+  descendingSort() {
+    this.isAscending = true;
+    this.results = this.results?.sort((n1,n2) => {
+      if (n1.name.last > n2.name.last) {
+          return 1;
+      }
+      if (n1.name.last < n2.name.last) {
+          return -1;
+      }
+      return 0;
+    });
+  }
 }

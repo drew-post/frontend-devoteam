@@ -1,9 +1,9 @@
 export class Login {
-    uuid: string | undefined;
-    username: string | undefined;
-    password: string | undefined;
-    salt: string | undefined;
-    md5: string | undefined;
-    sha1: string | undefined;
-    sha256: string | undefined;
+    uuid !: string;
+    username !: string;
+    password !: string;
+    salt !: string;
+    md5 !: string;
+    sha1 !: string;
+    sha256 !: string;
 }

@@ -1,4 +1,4 @@
 export class Registered {
-    date: string | undefined;
-    age: string | undefined;;
+    date !: string;
+    age !: string;
 }

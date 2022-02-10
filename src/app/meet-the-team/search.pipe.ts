@@ -6,13 +6,13 @@ import { User } from '../models/users.model';
 })
 
 export class SearchPipe implements PipeTransform {
-    transform(users: User[] | undefined, searchInput: string): User[] | undefined{     
+    transform(users: User[], searchInput: string): User[]{     
         if(!searchInput) {
             return  [];
         }
        searchInput = searchInput.toLowerCase();
-       return users?.filter(
-           x => x?.name?.first?.toLowerCase().includes(searchInput) || x?.name?.last?.toLowerCase().includes(searchInput)
+       return users.filter(
+           x => x?.name.first.toLowerCase().includes(searchInput) || x.name.last.toLowerCase().includes(searchInput)
        )
      }
 }

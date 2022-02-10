@@ -7,16 +7,16 @@ import { Id } from "./id.model";
 import { Dob } from "./dob.model";
 
 export class User {
-    gender: string | undefined;
-    name: Name | undefined;
-    location: Location | undefined;
-    email: string | undefined;
-    login: Login | undefined;
-    dob: Dob | undefined;
-    registered: Registered | undefined;
-    phone: string | undefined;
-    cell: string | undefined;
-    id: Id | undefined;
-    picture: Picture | undefined;
-    nat: string | undefined;
+    gender !: string;
+    name !: Name;
+    location !: Location;
+    email !: string;
+    login !: Login;
+    dob !: Dob;
+    registered !: Registered;
+    phone !: string;
+    cell !: string;
+    id !: Id;
+    picture !: Picture;
+    nat !: string;
 }

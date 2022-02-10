@@ -1,4 +1,4 @@
 export class Coordinates {
-    latitude: string | undefined;
-    longitude: string | undefined;
+    latitude !: string;
+    longitude !: string;
 }
