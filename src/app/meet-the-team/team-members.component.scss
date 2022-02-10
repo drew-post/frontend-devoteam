@@ -1,8 +1,6 @@
 :host .members {
-    padding: 0 61px 48px 0;
-    display: flex;
-    flex-direction: row;
-
+    padding: 0 0 48px 0;
+    
     &__view-toggle {
         padding-bottom: 18px;
     }
@@ -11,7 +9,7 @@
         background: url('../../icons/search-bar.svg') no-repeat 7px;
         border: none;
         outline: none;
-        width: 313px;
+        width: 300px;
         height: 34px;
         padding-left: 30px;
     }
@@ -21,53 +19,119 @@
         width: 25px;
         height: 25px;
     }
+
     &__list-view-icon {
         background: url('../../icons/list-view.svg') no-repeat;
+        margin-left: 350px;
     }
 
     &__grid-view-icon {
         background: url('../../icons/grid-view.svg') no-repeat;
+        margin-left: 350px;
     }
+
     &__sort-view-icon {
         background: url('../../icons/sorting-icon.svg') no-repeat;
+        padding-right: 30px;
     }
-    &__member-cards {
-        display: flex;
-        flex-direction: column;
+
+    &__member-cards-grid {
         width: 210px;
-        height: 342px;
-        background-color: var(--white-card-color);  
-        border-radius: 20px;  
+        height: 342px; 
+        border-radius: 20px; 
+        background: url('../../icons/green-grid-card.svg') no-repeat; 
     }
-    &__name, &__image, &__city {
-        align-self: center;
+
+    &__member-cards-list {
+        width: 749px;
+        height: 100px;
+        border-radius: 20px;
+        background: url('../../icons/green-list-card.svg') no-repeat;
+        padding-bottom: 61px;
+        display: flex;
+        flex-direction: row;
+
     }
-    &__name{
+
+    &__grid {
+        display: inline-flex;
+        grid-gap: 61px;
+        flex-wrap: wrap;
+    }
+
+    &__list {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    &__name-grid, &__name-list, &__image-grid, &__image-list, &__city-grid, &__city-list {
+        text-align: center;
+    }
+
+    &__name-grid, &__name-list {
         font-family: 'Karla';
         font-size: 18px;
-        padding: 65px 45px 35px 45px;
+        
     }
-    &__image{
+
+    &__name-grid {
+        margin: 65px 45px 35px 45px;
+        white-space: nowrap;
+    }
+
+    &__name-list {
+        margin: 28px 363px 3px 23px;
+        white-space: nowrap;
+    }
+
+    &__image-grid{
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        margin: 0 12px 28px 16px;
+        margin: 0 55px 31px 55px;
     }
-    &__city{
 
+    &__image-list {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 12px 23px 8px 31px;
     }
-    &__contact-info {
 
+    &__city-grid, &__city-list {
+        font-family: 'Lato';
+        font-size: 14px;
+        white-space: nowrap;
     }
+
+    &__city-grid {
+        margin: 0 80px 22px 70px;
+    }
+
+    &__city-list {
+        margin: 0 363px 31px 23px;
+    }
+
+    &__contact-info-grid {
+        margin: 0 80px 34px 80px;
+    }
+
+    &__contact-info-list {
+        margin: 40px 33px 38px 0;
+        
+    }
+
     &__email-icon, &__call-icon {
         border: none;
         width: 19px;
         height: 19px;
     }
+
     &__email-icon {
         background: url('../../icons/email-icon.svg') no-repeat;
         padding-right: 20px;
     }
+
     &__call-icon {
         background: url('../../icons/call-icon.svg') no-repeat;
     }
