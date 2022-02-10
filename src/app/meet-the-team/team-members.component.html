@@ -64,9 +64,11 @@
     <ng-container *ngIf="searchInput !== ''">
         <div class="members__list">
             <div class="members__member-cards-list" *ngFor="let user of results | search: searchInput; let i=index">
-                <p class="members__name-list">{{user.name.first}} {{user.name.last}}</p>
                 <img class="members__image-list" src={{user.picture.large}}/>
-                <p class="members__city-list">{{user.location.city}}</p>
+                <div>
+                    <p class="members__name-list">{{user.name.first}} {{user.name.last}}</p>
+                    <p class="members__city-list">{{user.location.city}}</p>   
+                </div>
                 <div class="members__contact-info-list">
                     <a href='mailto:`${{user.email}}`' class="members__email-icon"></a>
                     <a href='tel:`${{user.phone}}' class="members__call-icon"></a>
