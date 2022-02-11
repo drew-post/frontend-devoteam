@@ -28,22 +28,30 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Screenshots of my local repo
 - Grid View
+
   ![image](https://user-images.githubusercontent.com/44125751/153538053-1c2d9bac-9243-45c9-a3d8-f66f4381d001.png)
   
 - Grid Search
+
   ![image](https://user-images.githubusercontent.com/44125751/153538077-e13e5865-e1b7-4d06-b1a6-03194c5d80ff.png)
   
 - Grid Sort
+
   ![image](https://user-images.githubusercontent.com/44125751/153538391-34d1d488-cb8e-4bcd-b93b-c0f990b75862.png)
+  
   ![image](https://user-images.githubusercontent.com/44125751/153538406-74876b9b-dc56-4621-abe6-6fef6a678826.png)
   
 - List View
+
   ![image](https://user-images.githubusercontent.com/44125751/153538096-8c5532da-9d63-40c4-8720-4431cd819f42.png)
 
 - List Search
+
   ![image](https://user-images.githubusercontent.com/44125751/153538324-e78e30cf-c896-4595-b274-b6234c97c353.png)
   
 - List Sort 
+
   ![image](https://user-images.githubusercontent.com/44125751/153538249-f7383395-27c5-40fd-aed6-f59c56d1624d.png)
+  
   ![image](https://user-images.githubusercontent.com/44125751/153538276-fba973d2-a1c1-46fa-a735-475c2b0e5034.png)
 
