@@ -1,6 +1,6 @@
-# FrontendDevoteam
+# Description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2. It takes a random 50 users from the Random User API (https://randomuser.me/api/?results=50) and displays them in a list and grid view according to provided Figma designs. 
 
 ## Development server
 
