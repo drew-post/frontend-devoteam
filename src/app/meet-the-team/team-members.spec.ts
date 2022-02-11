@@ -3,6 +3,7 @@ import { TeamMembersComponent } from './team-members.component';
 import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { User } from '../models/users.model';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { By } from '@angular/platform-browser';
 
 describe('TeamMembersComponent', () => {
   let component: TeamMembersComponent;
@@ -139,15 +140,96 @@ describe('TeamMembersComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  describe('TeamMembersComponent', () => {
+    it('should create', () => {
+      expect(component).toBeTruthy();
+    });
+  
+    it('should call API on ngInit()', () => {
+      // Call API
+      component.ngOnInit();
 
-  it('should call api on ngInit()', () => {
+      // Check that results array is populated
+      expect(component.results).not.toBeNull;
+    });
+
+    it('should call fill grid member cards with information', () => {
+      // Call API
+      component.ngOnInit();
+
+      // Name field
+      let name = fixture.debugElement.nativeElement.querySelector('p.members__name-grid');
+      expect(name).toBeTruthy;
+
+      // Image field
+      let image = fixture.debugElement.nativeElement.querySelector('p.members__image-grid');
+      expect(image).toBeTruthy;
+
+      // City field
+      let city = fixture.debugElement.nativeElement.querySelector('p.members__city-grid');
+      expect(city).toBeTruthy;
+
+      // Contact field
+      let contactInfo = fixture.debugElement.nativeElement.querySelector('p.members__contact-info-grid');
+      expect(contactInfo).toBeTruthy;
+
+    });
+
+    it('should call fill list member cards with information', () => {
+      // Call API
+      component.ngOnInit();
+      component.changeDisplay(2);
+
+      // Name field
+      let name = fixture.debugElement.nativeElement.querySelector('p.members__name-list');
+      expect(name).toBeTruthy;
+
+      // Image field
+      let image = fixture.debugElement.nativeElement.querySelector('p.members__image-list');
+      expect(image).toBeTruthy;
+
+      // City field
+      let city = fixture.debugElement.nativeElement.querySelector('p.members__city-list');
+      expect(city).toBeTruthy;
+
+      // Contact field
+      let contactInfo = fixture.debugElement.nativeElement.querySelector('p.members__contact-info-list');
+      expect(contactInfo).toBeTruthy;
+
+    });
+
+    it('should change view when view button is clicked', () => {
+      // Spy on method called when button is clicked
+      component.ngOnInit();
+      spyOn(component, 'changeDisplay');
+  
+      // Identify button and click
+      let button = fixture.debugElement.nativeElement.querySelector('button.members__list-view-icon');
+      button.click();
+  
+      // Detect changes and expect changeDisplay() method to have been called
+      fixture.detectChanges();
     
-  });
-
-  it('should create cards with the right content', () => {
+      fixture.whenStable().then(() => {
+        expect(component.changeDisplay).toHaveBeenCalled();
+      });
+    });
+  
+    it('should sort when sort button is clicked', () => {
+      // Spy on method called when button is clicked
+      spyOn(component, 'send');
+  
+      // Identify button and click
+      let button = fixture.debugElement.nativeElement.querySelector('button.members__sort-view-icon');
+      button.click();
+  
+      // Detect changes and expect send() method to have been called
+      fixture.detectChanges();
+    
+      fixture.whenStable().then(() => {
+        expect(component.send).toHaveBeenCalled();
+      });
+    });
 
   });
 

@@ -18,7 +18,6 @@ export class TeamMembersComponent implements OnInit {
 
   ngOnInit(): void {
     this.httpClient.get<User[]>('https://randomuser.me/api/?results=50').subscribe(Response => {
-     console.log(Response)
       this.unformattedResponse=Response;
       this.results=this.unformattedResponse.results; 
     });
@@ -42,7 +41,7 @@ export class TeamMembersComponent implements OnInit {
             return -1;
         }
         return 0;
-      });
+    });
   }
 
   descendingSort() {
