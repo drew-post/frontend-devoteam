@@ -6,6 +6,7 @@ import { Registered } from "./registered.model";
 import { Id } from "./id.model";
 import { Dob } from "./dob.model";
 
+// Follow API model fields - working under assumption that fields will not be null
 export class User {
     gender !: string;
     name !: Name;

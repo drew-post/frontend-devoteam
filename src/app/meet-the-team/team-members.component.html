@@ -20,7 +20,7 @@
             </div>
         </div>
     </ng-container>
-    <!-- If search bar is being used, search users -->
+    <!-- If search bar is being used, display search users -->
     <ng-container *ngIf="searchInput !== ''">
         <div class="members__grid">
             <div class="members__member-cards-grid" *ngFor="let user of results | search: searchInput; let i=index">
@@ -60,7 +60,7 @@
             </div>
         </div>
     </ng-container>
-    <!-- If search bar is being used, search users -->
+    <!-- If search bar is being used, display search users -->
     <ng-container *ngIf="searchInput !== ''">
         <div class="members__list">
             <div class="members__member-cards-list" *ngFor="let user of results | search: searchInput; let i=index">

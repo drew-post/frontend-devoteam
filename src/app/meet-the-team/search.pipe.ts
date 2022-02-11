@@ -6,6 +6,7 @@ import { User } from '../models/users.model';
 })
 
 export class SearchPipe implements PipeTransform {
+    // Take in a User array and a search input, convert input to lower case, filter User array to contain items with search input in first or last name -- if empty then return empty array
     transform(users: User[], searchInput: string): User[]{     
         if(!searchInput) {
             return  [];
