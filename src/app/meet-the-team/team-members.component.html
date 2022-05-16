@@ -64,7 +64,7 @@
     <ng-container *ngIf="searchInput !== ''">
         <div class="members__list">
             <div class="members__member-cards-list" *ngFor="let user of results | search: searchInput; let i=index">
-                <img class="members__image-list" src={{user.picture.large}}/>
+                <img class="members__image-list" src={{user.picture.large}} loading="lazy"/>
                 <div>
                     <p class="members__name-list">{{user.name.first}} {{user.name.last}}</p>
                     <p class="members__city-list">{{user.location.city}}</p>   
