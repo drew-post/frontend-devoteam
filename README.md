@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2. It takes a random 50 users from the Random User API (https://randomuser.me/api/?results=50) and displays them in a list and grid view.
 
+## Things I would improve about this project
+
+Now that it's been about a year since I initially created this project, some things I would improve in the future include:
+- Breaking out list, grid, filter, and search functionalities into their own components for modularity
+- Lazy load those components + the images
+- Clean up styling and UI 
+
 ## Development server
 
 - Run `ng serve` or `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
