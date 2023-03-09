@@ -5,7 +5,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Things I would improve about this project
 
 Now that it's been about a year since I initially created this project, some things I would improve in the future include:
-- Breaking out list, grid, filter, and search functionalities into their own components for modularity
 - Lazy load those components + the images
 - Clean up styling and UI 
 
