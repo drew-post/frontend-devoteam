@@ -1,0 +1,72 @@
+:host .grid-view {
+  display: inline-flex;
+  grid-gap: 61px;
+  flex-wrap: wrap;
+
+  &__cards {
+    width: 210px;
+    height: 342px;
+    border-radius: 20px;
+    background: url("../../../assets/icons/green-grid-card.svg") no-repeat;
+  }
+
+  &__cards:nth-child(3n + 1) {
+    background: url("../../../assets/icons/orange-grid-card.svg") no-repeat;
+  }
+
+  &__cards:nth-child(3n + 2) {
+    background: url("../../../assets/icons/pink-grid-card.svg") no-repeat;
+  }
+
+  &__name-grid,
+  &__image-grid,
+  &__city-grid {
+    text-align: center;
+  }
+
+  &__name-grid {
+    font-family: "Karla";
+    font-size: 18px;
+    margin: 65px 45px 35px 42px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__image-grid {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 55px 31px 55px;
+  }
+
+  &__city-grid {
+    font-family: "Lato";
+    font-size: 14px;
+    white-space: nowrap;
+    margin: 0 80px 22px 70px;
+    overflow: hidden;
+  }
+
+  &__contact-info-grid {
+    margin: 0 80px 34px 80px;
+  }
+
+  &__email-icon,
+  &__call-icon {
+    border: none;
+    width: 19px;
+    height: 19px;
+  }
+
+  &__email-icon {
+    background: url("../../../assets/icons/email-icon.svg") no-repeat 1px;
+    padding-top: 4px;
+    padding-right: 30px;
+  }
+
+  &__call-icon {
+    background: url("../../../assets/icons/call-icon.svg") no-repeat 1px;
+    padding-right: 22px;
+    padding-top: 7px;
+  }
+}

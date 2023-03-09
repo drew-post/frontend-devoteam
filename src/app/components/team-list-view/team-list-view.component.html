@@ -1,0 +1,13 @@
+<div class="list-view">
+  <div class="list-view__cards" *ngFor="let user of users; let i=index">
+    <img class="list-view__image-list" src={{user.picture.large}} />
+    <div>
+      <p class="list-view__name-list">{{user.name.first}} {{user.name.last}}</p>
+      <p class="list-view__city-list">{{user.location.city}}</p>
+    </div>
+    <div class="list-view__contact-info-list">
+      <a href='mailto:`${{user.email}}`' class="list-view__email-icon"></a>
+      <a href='tel:`${{user.phone}}' class="list-view__call-icon"></a>
+    </div>
+  </div>
+</div>

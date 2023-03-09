@@ -1,4 +1,4 @@
-import { User } from '../models/users.model';
+import { User } from '../../models/users.model';
 import { SearchPipe } from './search.pipe'
 
 let exampleUser1: User = {
@@ -9,7 +9,7 @@ let exampleUser1: User = {
       last:"Nunes"
     },
     location: {
-      street: { 
+      street: {
         number:1227,
         name:"Rua Rio de Janeiro "
       },
@@ -17,7 +17,7 @@ let exampleUser1: User = {
       state:"Ceará",
       country:"Brazil",
       postcode:54807,
-      coordinates: { 
+      coordinates: {
         latitude:"-68.9671",
         longitude:"-41.7292"
       },
@@ -27,7 +27,7 @@ let exampleUser1: User = {
       }
     },
     email:"adonai.nunes@example.com",
-    login:{ 
+    login:{
       uuid:"0b019537-63b4-41fb-b544-f1079c238d93",
       username:"brownfrog945",
       password:"flicks",
@@ -122,7 +122,7 @@ let exampleUser2Results: User[] = [exampleUser2];
 describe('SearchPipe', () => {
     // This pipe is a pure, stateless function so no need for BeforeEach
     const pipe = new SearchPipe();
-  
+
     it('returns name if searches for correct last name', () => {
         // Search for user 1 and 2's last names
         expect(pipe.transform(exampleResults, 'Nunes')).toEqual(exampleUser1Results);
