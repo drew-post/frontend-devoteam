@@ -17,12 +17,12 @@ export class SearchAndFilterBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggleDisplay(isList: boolean): void {
+  toggleDisplay(): void {
     this.outputIsList.emit(!this.listState);
     console.log('Change display event emitted: ', !this.listState);
   }
 
-  sort(isAscending: boolean) {
+  sort() {
     this.outputIsAscending.emit(!this.ascendingState);
     console.log('Sort event emitted: ', !this.ascendingState);
   }

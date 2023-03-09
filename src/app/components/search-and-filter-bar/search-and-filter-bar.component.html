@@ -1,0 +1,6 @@
+<div class="search-and-filter">
+  <button class="search-and-filter__sort-view-icon" (click)="sort()"></button>
+  <input class="search-and-filter__search-bar" name="searchInput" type="text" #searchInput (input)="search(searchInput)"
+    size="50" />
+  <button [class]="this.listState ? 'search-and-filter__list-view-icon' : 'search-and-filter__grid-view-icon'" (click)="toggleDisplay()"></button>
+</div>

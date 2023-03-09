@@ -8,7 +8,7 @@ import { TeamMembersComponent } from './components/meet-the-team/team-members.co
 import { SearchPipe } from '../app/pipes/search/search.pipe';
 import { FormsModule } from '@angular/forms';
 import { TeamGridViewComponent } from './components/team-grid-view/team-grid-view.component';
-import { SearchAndFilterBarComponent } from './components/search-and-filter-bar/search-and-filter-bar/search-and-filter-bar.component';
+import { SearchAndFilterBarComponent } from './components/search-and-filter-bar/search-and-filter-bar.component';
 import { TeamListViewComponent } from './components/team-list-view/team-list-view.component';
 
 @NgModule({

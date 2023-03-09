@@ -12,15 +12,15 @@
   }
 
   &__cards:nth-child(3n) {
-    background: url("assets/icons/green-list-card.svg") no-repeat;
+    background: url("../../../assets/icons/green-list-card.svg") no-repeat;
   }
 
   &__cards:nth-child(3n + 2) {
-    background: url("assets/icons/orange-list-card.svg") no-repeat;
+    background: url("../../../assets/icons/orange-list-card.svg") no-repeat;
   }
 
   &__cards:nth-child(3n + 1) {
-    background: url("assets/icons/pink-list-card.svg") no-repeat;
+    background: url("../../../assets/icons/pink-list-card.svg") no-repeat;
   }
 
   &__name-list,
@@ -62,13 +62,13 @@
   }
 
   &__email-icon {
-    background: url("assets/icons/email-icon.svg") no-repeat 1px;
+    background: url("../../../assets/icons/email-icon.svg") no-repeat 1px;
     padding-top: 4px;
     padding-right: 30px;
   }
 
   &__call-icon {
-    background: url("assets/icons/call-icon.svg") no-repeat 1px;
+    background: url("../../../assets/icons/call-icon.svg") no-repeat 1px;
     padding-right: 22px;
     padding-top: 7px;
   }

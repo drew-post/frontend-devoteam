@@ -4,7 +4,7 @@
   align-items: center;
 
   &__search-bar {
-    background: url("../../../../assets/icons/search-bar.svg") no-repeat 7px;
+    background: url("../../../assets/icons/search-bar.svg") no-repeat 7px;
     border: none;
     outline: none;
     width: 300px;
@@ -21,17 +21,17 @@
   }
 
   &__sort-view-icon {
-    background: url("../../../../assets/icons/sorting-icon.svg") no-repeat;
+    background: url("../../../assets/icons/sorting-icon.svg") no-repeat;
     padding-right: 30px;
   }
 
   &__list-view-icon {
-    background: url("../../../../assets/icons/list-view.svg") no-repeat;
+    background: url("../../../assets/icons/list-view.svg") no-repeat;
     margin-left: 350px;
   }
 
   &__grid-view-icon {
-    background: url("../../../../assets/icons/grid-view.svg") no-repeat;
+    background: url("../../../assets/icons/grid-view.svg") no-repeat;
     margin-left: 350px;
   }
 }
