@@ -1,7 +1,6 @@
 import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { User } from '../../models/users.model';
 import { HttpClient } from '@angular/common/http';
-import { SearchPipe } from 'src/app/pipes/search/search.pipe';
 
 @Component({
   selector: 'app-meet-the-team',
@@ -15,7 +14,7 @@ export class TeamMembersComponent implements OnInit {
   public isAscending: boolean = false;
   public isList: boolean = false;
 
-  constructor(private httpClient: HttpClient, private searchPipe: SearchPipe) { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
     this.httpClient.get<User[]>('https://randomuser.me/api/?results=50').subscribe(response => {
@@ -24,17 +23,17 @@ export class TeamMembersComponent implements OnInit {
     });
   }
 
-  changeDisplay(isList: boolean): void {
-    this.isList = isList;
+  changeDisplay(): void {
+    this.isList = !this.isList;
   }
 
-  search(searchInput: any) {
+  search(searchInput: string) {
     this.searchInput = searchInput;
   }
 
-  sort(isAscending: boolean) {
-    this.isAscending = isAscending;
-    isAscending ? this.ascendingSort() : this.descendingSort();
+  sort() {
+    this.isAscending = !this.isAscending;
+    this.isAscending ? this.ascendingSort() : this.descendingSort();
   }
 
   ascendingSort() {

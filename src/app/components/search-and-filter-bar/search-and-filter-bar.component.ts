@@ -7,9 +7,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SearchAndFilterBarComponent implements OnInit {
   @Input() listState: boolean = false;
-  @Input() ascendingState: boolean = false;
-  @Output() outputIsList = new EventEmitter<boolean>();
-  @Output() outputIsAscending = new EventEmitter<boolean>();
+  @Output() outputIsList = new EventEmitter<null>();
+  @Output() outputIsAscending = new EventEmitter<null>();
   @Output() searchContent = new EventEmitter<string>();
 
   constructor() { }
@@ -18,13 +17,13 @@ export class SearchAndFilterBarComponent implements OnInit {
   }
 
   toggleDisplay(): void {
-    this.outputIsList.emit(!this.listState);
-    console.log('Change display event emitted: ', !this.listState);
+    this.outputIsList.emit();
+    console.log('Change display event emitted');
   }
 
   sort() {
-    this.outputIsAscending.emit(!this.ascendingState);
-    console.log('Sort event emitted: ', !this.ascendingState);
+    this.outputIsAscending.emit();
+    console.log('Sort event emitted');
   }
 
   search(searchInput: HTMLInputElement) {

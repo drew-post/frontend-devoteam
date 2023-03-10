@@ -1,4 +1,4 @@
-<app-search-and-filter-bar [listState]="isList" [ascendingState]="isAscending" (outputIsList)="changeDisplay($event)" (outputIsAscending)="sort($event)"
+<app-search-and-filter-bar [listState]="this.isList" (outputIsList)="changeDisplay()" (outputIsAscending)="sort()"
   (searchContent)="search($event)"></app-search-and-filter-bar>
 <ng-container *ngIf="!isList">
   <app-team-grid-view [users]="results | search: searchInput"></app-team-grid-view>

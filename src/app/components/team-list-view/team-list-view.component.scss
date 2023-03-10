@@ -23,33 +23,33 @@
     background: url("../../../assets/icons/pink-list-card.svg") no-repeat;
   }
 
-  &__name-list,
-  &__image-list {
+  &__name,
+  &__image {
     text-align: center;
   }
 
-  &__name-list {
+  &__name {
     margin: 28px 0 3px 23px;
     white-space: nowrap;
     font-family: "Karla";
     font-size: 18px;
   }
 
-  &__image-list {
+  &__image {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin: 12px 23px 8px 31px;
   }
 
-  &__city-list {
+  &__city {
     font-family: "Lato";
     font-size: 14px;
     white-space: nowrap;
     margin: 0 0 31px 23px;
   }
 
-  &__contact-info-list {
+  &__contact-info {
     margin: 40px 33px 38px 665px;
     position: absolute;
   }
