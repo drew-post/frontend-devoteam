@@ -1,6 +1,6 @@
 <div class="grid-view">
   <div class="grid-view__cards" *ngFor="let user of users; let i=index">
-    <p class="grid-view__name-">{{user.name.first}} {{user.name.last}}</p>
+    <p class="grid-view__name">{{user.name.first}} {{user.name.last}}</p>
     <img class="grid-view__image" src={{user.picture.large}} />
     <p class="grid-view__city">{{user.location.city}}</p>
     <div class="grid-view__contact-info">
