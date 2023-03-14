@@ -5,10 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Things I would improve about this project
 
 Now that it's been about a year since I initially created this project, some things I would improve in the future include:
-- Create a small service for the API call to Random Users
-- Lazy load components + the images
-- Re-implement the tests that existed before I restructured the repo
-- Clean up styling and UI 
+- Re-implement the tests that existed before I restructured the repo + implement new tests for API service
+- Clean up styling and UI + make the app more responsive
 
 ## Development server
 

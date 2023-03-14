@@ -1,6 +1,7 @@
 import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { User } from '../../models/users.model';
 import { HttpClient } from '@angular/common/http';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-meet-the-team',
@@ -8,18 +9,16 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./team-members.component.scss']
 })
 export class TeamMembersComponent implements OnInit {
-  public unformattedResponse: any;
-  public results : User[] = [];
+  public users : User[] = [];
   public searchInput: string = '';
   public isAscending: boolean = false;
   public isList: boolean = false;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
-    this.httpClient.get<User[]>('https://randomuser.me/api/?results=50').subscribe(response => {
-      this.unformattedResponse = response;
-      this.results = this.unformattedResponse.results;
+    this.usersService.getUsers().subscribe((response) => {
+      this.users = response;
     });
   }
 
@@ -37,7 +36,7 @@ export class TeamMembersComponent implements OnInit {
   }
 
   ascendingSort() {
-    this.results = this.results?.sort((n1, n2) => {
+    this.users = this.users?.sort((n1, n2) => {
       if (n1.name.last < n2.name.last) {
         return 1;
       }
@@ -49,7 +48,7 @@ export class TeamMembersComponent implements OnInit {
   }
 
   descendingSort() {
-    this.results = this.results?.sort((n1, n2) => {
+    this.users = this.users?.sort((n1, n2) => {
       if (n1.name.last > n2.name.last) {
         return 1;
       }

@@ -1,8 +1,8 @@
 <app-search-and-filter-bar [listState]="this.isList" (outputIsList)="changeDisplay()" (outputIsAscending)="sort()"
   (searchContent)="search($event)"></app-search-and-filter-bar>
 <ng-container *ngIf="!isList">
-  <app-team-grid-view [users]="results | search: searchInput"></app-team-grid-view>
+  <app-team-grid-view [users]="users | search: searchInput"></app-team-grid-view>
 </ng-container>
 <ng-container *ngIf="isList">
-  <app-team-list-view [users]="results | search: searchInput"></app-team-list-view>
+  <app-team-list-view [users]="users | search: searchInput"></app-team-list-view>
 </ng-container>
