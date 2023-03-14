@@ -160,12 +160,12 @@ describe('TeamMembersComponent', () => {
     it('should change display number on call', () => {
       expect(component.changeDisplay).toBeDefined();
 
-      // Check if default value for display is 1, change display from 1 to 2
+      // Check if default value for list display is false, change list display to true
       expect(component.isList).toEqual(false);
       component.changeDisplay();
       expect(component.isList).toEqual(true);
 
-      // Change display back to 1
+      // Change list display back to false
       component.changeDisplay();
       expect(component.isList).toEqual(false);
     });

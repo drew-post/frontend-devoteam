@@ -8,9 +8,9 @@ describe('SearchAndFilterBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchAndFilterBarComponent ]
+      declarations: [SearchAndFilterBarComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -22,37 +22,37 @@ describe('SearchAndFilterBarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-    
-    //     it('should change view when view button is clicked', () => {
-    //       // Spy on method called when button is clicked
-    //       component.ngOnInit();
-    //       spyOn(component, 'changeDisplay');
-    
-    //       // Identify button and click
-    //       let button = fixture.debugElement.nativeElement.querySelector('button.members__list-view-icon');
-    //       button.click();
-    
-    //       // Detect changes and expect changeDisplay() method to have been called
-    //       fixture.detectChanges();
-    
-    //       fixture.whenStable().then(() => {
-    //         expect(component.changeDisplay).toHaveBeenCalled();
-    //       });
-    //     });
-    
-    //     it('should sort when sort button is clicked', () => {
-    //       // Spy on method called when button is clicked
-    //       spyOn(component, 'send');
-    
-    //       // Identify button and click
-    //       let button = fixture.debugElement.nativeElement.querySelector('button.members__sort-view-icon');
-    //       button.click();
-    
-    //       // Detect changes and expect send() method to have been called
-    //       fixture.detectChanges();
-    
-    //       fixture.whenStable().then(() => {
-    //         expect(component.send).toHaveBeenCalled();
-    //       });
-    //     });
+
+  it('should emit an event when view button is clicked', () => {
+    // Spy on method called when button is clicked
+    component.ngOnInit();
+    spyOn(component, 'toggleDisplay');
+
+    // Identify button and click
+    let button = fixture.debugElement.nativeElement.querySelector('button.search-and-filter__grid-view-icon');
+    button.click();
+
+    // Detect changes and expect changeDisplay() method to have been called
+    fixture.detectChanges();
+
+    fixture.whenStable().then(() => {
+      expect(component.toggleDisplay).toHaveBeenCalled();
+    });
+  });
+
+  it('should emit event when sort button is clicked', () => {
+    // Spy on method called when button is clicked
+    spyOn(component, 'sort');
+
+    // Identify button and click
+    let button = fixture.debugElement.nativeElement.querySelector('button.search-and-filter__sort-view-icon');
+    button.click();
+
+    // Detect changes and expect send() method to have been called
+    fixture.detectChanges();
+
+    fixture.whenStable().then(() => {
+      expect(component.sort).toHaveBeenCalled();
+    });
+  });
 });
