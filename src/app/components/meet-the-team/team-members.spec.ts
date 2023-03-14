@@ -126,8 +126,8 @@ describe('TeamMembersComponent', () => {
   }
 
   let exampleResults: User[] = [exampleUser1, exampleUser2];
-  let exampleDescResults: User[] = [exampleUser1, exampleUser2];
-  let exampleAscResults: User[] = [exampleUser2, exampleUser1];
+  let exampleDescResults: User[] = [exampleUser2, exampleUser1];
+  let exampleAscResults: User[] = [exampleUser1, exampleUser2];
   let usersServiceSpy: jasmine.SpyObj<UsersService>;
 
   beforeEach(async () => {
@@ -172,38 +172,18 @@ describe('TeamMembersComponent', () => {
   });
 
   describe('sort', () => {
-    it('should change boolean value on call', () => {
+    it('should sort users and update variables', () => {
       expect(component.sort).toBeDefined();
 
       // Check if default value for isAscending is false, change isAscending from false to true
       expect(component.isAscending).toEqual(false);
       component.sort();
       expect(component.isAscending).toEqual(true);
+      expect(component.users).toEqual(exampleAscResults);
 
       // Change display back to false
       component.sort();
       expect(component.isAscending).toEqual(false);
-    });
-  });
-
-  describe('ascendingSort', () => {
-    it('should sort by ascending last name', () => {
-      expect(component.ascendingSort).toBeDefined();
-
-      component.ascendingSort()
-
-      // Expect results to equal example ascending results
-      expect(component.users).toEqual(exampleAscResults);
-    });
-  });
-
-  describe('descendingSort', () => {
-    it('should sort by descending last name', () => {
-      expect(component.descendingSort).toBeDefined();
-
-      component.descendingSort()
-
-      // Expect results to equal example descending results
       expect(component.users).toEqual(exampleDescResults);
     });
   });

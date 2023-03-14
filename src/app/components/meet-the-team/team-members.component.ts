@@ -32,30 +32,13 @@ export class TeamMembersComponent implements OnInit {
 
   sort() {
     this.isAscending = !this.isAscending;
-    this.isAscending ? this.ascendingSort() : this.descendingSort();
-  }
+    this.users?.sort((a, b) => {
+      let order = this.isAscending ? 1 : -1;
 
-  ascendingSort() {
-    this.users = this.users?.sort((n1, n2) => {
-      if (n1.name.last < n2.name.last) {
-        return 1;
-      }
-      if (n1.name.last > n2.name.last) {
-        return -1;
-      }
-      return 0;
-    });
-  }
-
-  descendingSort() {
-    this.users = this.users?.sort((n1, n2) => {
-      if (n1.name.last > n2.name.last) {
-        return 1;
-      }
-      if (n1.name.last < n2.name.last) {
-        return -1;
-      }
-      return 0;
-    });
+      return (
+        a.name.last.toLowerCase() < b.name.last.toLowerCase()
+        ? -1 * order : 1 * order
+      );
+    })
   }
 }
