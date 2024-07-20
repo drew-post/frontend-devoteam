@@ -1,6 +1,5 @@
-import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/users.model';
-import { HttpClient } from '@angular/common/http';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
